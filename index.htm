@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remote Sensing Web Map</title>
+    <link rel="stylesheet" href="styleweb.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v10.5.0/ol.css">
+</head>
+<body>
+    <header>
+        Remote Sensing Application Centre
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="http://127.0.0.1:5500/about.html">About Us</a></li>
+            <li><a href="http://127.0.0.1:5500/contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <aside class="sidebar">
+            <ul>
+                <li>Dashboard</li>
+                <li>Satellite Data</li>
+                <li>Analytics</li>
+                <li>Downloads</li>
+            </ul>
+        </aside>
+
+        <section class="content">
+        <h2>Welcome</h2>
+         <div style="display: flex; align-items: center; gap: 2rem;">
+          <p>This is the map area for remote sensing applications.</p>
+          <label><input type="checkbox" id="toggle-india" checked> Show India Boundary</label>
+          <label><input type="checkbox" id="toggle-state" checked> Show State Boundaries</label>
+         </div>
+
+            <div id="js-map"></div>
+            <div id="popup" class="ol-popup"></div>
+        </section>
+    </main>
+
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ol@v10.5.0/dist/ol.js"></script>
+</body>
+</html>
