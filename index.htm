@@ -1,49 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Remote Sensing Web Map</title>
-    <link rel="stylesheet" href="styleweb.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v10.5.0/ol.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Remote Sensing Web Map</title>
+  <link rel="stylesheet" href="styleweb.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v10.5.0/ol.css" />
 </head>
 <body>
-    <header>
-        Remote Sensing Application Centre
-    </header>
+  <header>
+    Remote Sensing Application Centre
+  </header>
 
-    <nav>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="http://127.0.0.1:5500/about.html">About Us</a></li>
+      <li><a href="http://127.0.0.1:5500/contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <button id="toggle-sidebar">☰</button>
+    <div class="main-container">
+      <aside class="sidebar">
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="http://127.0.0.1:5500/about.html">About Us</a></li>
-            <li><a href="http://127.0.0.1:5500/contact.html">Contact Us</a></li>
+          <li>Dashboard</li>
+          <li>Satellite Data</li>
+          <li>Analytics</li>
+          <li>Downloads</li>
+          <li>
+            <label>
+              <input type="checkbox" id="toggle-india" checked />
+              Show India Boundary
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" id="toggle-state" checked />
+              Show State Boundaries
+            </label>
+          </li>
         </ul>
-    </nav>
+      </aside>
 
-    <main>
-        <aside class="sidebar">
-            <ul>
-                <li>Dashboard</li>
-                <li>Satellite Data</li>
-                <li>Analytics</li>
-                <li>Downloads</li>
-            </ul>
-        </aside>
-
-        <section class="content">
+      <section class="content">
         <h2>Welcome</h2>
-         <div style="display: flex; align-items: center; gap: 2rem;">
-          <p>This is the map area for remote sensing applications.</p>
-          <label><input type="checkbox" id="toggle-india" checked> Show India Boundary</label>
-          <label><input type="checkbox" id="toggle-state" checked> Show State Boundaries</label>
-         </div>
+        <p>This is the map area for remote sensing applications.</p>
 
-            <div id="js-map"></div>
-            <div id="popup" class="ol-popup"></div>
-        </section>
-    </main>
+        <div id="js-map"></div>
+        <div id="popup" class="ol-popup"></div>
+      </section>
+    </div>
+  </main>
 
-    <script src="main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/ol@v10.5.0/dist/ol.js"></script>
+  <script src="main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/ol@v10.5.0/dist/ol.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
