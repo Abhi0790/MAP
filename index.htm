@@ -31,6 +31,12 @@
           <li>Downloads</li>
           <li>
             <label>
+              <input type="checkbox" id="toggle-wms" checked />
+              Show WMS State Layer
+            </label>
+          </li>
+          <li>
+            <label>
               <input type="checkbox" id="toggle-india" checked />
               Show India Boundary
             </label>
@@ -48,7 +54,19 @@
         <h2>Welcome</h2>
         <p>This is the map area for remote sensing applications.</p>
 
-        <div id="js-map"></div>
+        <div id="js-map">
+          <!-- State/UT Dropdown Filter -->
+          <div class="dropdown" id="state-filter-dropdown">
+            <button id="dropdown-toggle" class="dropdown-btn">
+              📍 Filter by State/UT
+            </button>
+            <div class="dropdown-content">
+              <select id="state-dropdown" class="state-select">
+                <!-- Options will be populated by JavaScript -->
+              </select>
+            </div>
+          </div>
+        </div>
         <div id="popup" class="ol-popup"></div>
       </section>
     </div>
